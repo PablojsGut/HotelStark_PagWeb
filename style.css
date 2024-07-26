@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #E1E2E6;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    z-index: 1000;
+    /* Asegura que el menú esté por encima del contenido */
+
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(img/bg/bg1.JPG);
+    background-position: center 85%;
+    background-repeat: no-repeat;
+    /*background-size: 100% 100vh;*/
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+    /* Ajusta el ancho según sea necesario */
+    height: 85.7px;
+    /* Ajusta la altura según sea necesario */
+    background-image: url('img/logos/LOGO\ HOTEL\ STARK\ -\ blanco.png');
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    /* Asegura que el contenedor se ajuste al tamaño del contenido */
+    text-indent: -9999px;
+    /* Esconde el texto, pero deja el contenido accesible para lectores de pantalla */
+    margin-top: 10px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #0071c1;
+}
+
+/* Oculta el checkbox visualmente pero lo mantiene funcional */
+#menu-checkbox {
+    position: absolute;
+    /* Saca el checkbox del flujo del documento */
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    /* Oculta el checkbox de forma accesible */
+    border: 0;
+}
+
+#menu-checkbox:checked~.navbar {
+    display: block;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+}
+
+.header-content h4 {
+    color: #F9FAFC;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 100px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    color: #c2c2c2;
+    padding: 15px 0px 65px;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 55px;
+    color: #000000;
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas */
+    background-color: transparent;
+    /* Fondo transparente */
+    position: relative;
+    /* Para posicionar la línea subrayada */
+    display: inline-block;
+    /* Ajuste para el tamaño del contenedor */
+    text-align: center;
+}
+
+h2::after {
+    content: "";
+    /* Pseudo-elemento vacío */
+    position: absolute;
+    /* Posición absoluta para la línea subrayada */
+    left: 50%;
+    bottom: 0px;
+    /* Ajusta esta distancia según sea necesario */
+    width: 80%;
+    height: 5px;
+    /* Grosor de la línea */
+    background-color: #165f7d;
+    /* Color de la línea */
+    transform: translateX(-50%);
+    /* Compensa la posición para centrarla */
+}
+
+li {
+    list-style-type: disc;
+    /* Esto asegura que los puntos se muestren como discos (bullets) */
+}
+
+.txt-p-1 {
+    color: #C5C5C5;
+    font-size: 16px;
+    margin-bottom: 25px;
+
+}
+
+.txt-p-2 {
+    padding: 20px 100px 50px 100px;
+    color: #454545;
+}
+
+.lbl {
+    color: #ffffff;
+    /* Color del texto blanco */
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #0071c1;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: #F9FAFC;
+    color: #0071c1;
+    font-weight: bold;
+}
+
+.about {
+    padding: 50px 0px 100px 0px;
+    background-color: #E1E2E6;
+}
+
+.about-content {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.about-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(img/bg/bg3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.services-1 {
+    padding: 0 100px;
+    margin-bottom: 50px;
+}
+
+.services-1 img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.services-1 h4 {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+.services-info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.services-info-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    max-width: 800px;
+    /* Ajusta el ancho máximo de las secciones */
+}
+
+
+.services-info-1 h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Fuente más elegante */
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.services-info-1 h3::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: #165f7d;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center items horizontally */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Allow wrapping of content */
+    width: 100%;
+}
+
+.service-item img {
+    transition: margin-right 0.3s ease, transform 0.3s ease;
+    /* Transición suave */
+    margin-right: 20px;
+    /* Space between image and paragraph */
+    max-width: 75vh;
+    /* Adjust the image size as necessary */
+    display: block;
+    margin: 0 auto;
+}
+
+.service-item p {
+    display: none;
+    /* Initially hide the text */
+    flex: 1;
+    /* Take the rest of the available space */
+    margin-left: 20px;
+    /* Space between image and text */
+    transition: opacity 0.3s ease;
+    /* Transición suave */
+    opacity: 0;
+}
+
+.service-item:hover p {
+    display: block;
+    /* Show the text on hover */
+    opacity: 1;
+}
+
+.service-item:hover img {
+    margin-right: 20px;
+    /* Space between image and paragraph on hover */
+    transform: translateX(-20px);
+    /* Move image to the left on hover */
+}
+
+.maps-info {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(img/bg/bg2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.maps-info p {
+    padding: 20px 120px 0px 120px;
+}
+
+.maps {
+    display: flex;
+}
+
+.map-1 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.map-2,
+.map-3 {
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #8a6e58;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+    /* Asegura una transición suave */
+}
+
+.map-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bg/sede1.jpg');
+}
+
+.map-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bg/sede2.jpg');
+}
+
+.info-sucursal {
+    max-height: 0;
+    overflow: hidden;
+    color: #C5C5C5;
+    font-size: 16px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 1s ease, transform 1s ease, max-height 1s ease;
+}
+
+.info-sucursal li {
+    list-style-type: disc;
+    margin-left: 20px;
+    /* Asegura que los puntos de la lista tengan un margen adecuado */
+}
+
+.map-2:hover .info-sucursal,
+.map-3:hover .info-sucursal {
+    max-height: 550px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.convenios {
+    text-align: center;
+    padding: 0 0 10px 0;
+    margin-top: 80px;
+}
+
+.convenios-content {
+    margin: 50px 0 70px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.convenios-1 {
+    padding: 100px 0px;
+    border: 3.5px solid black;
+    /* Borde negro */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: all 0.3s ease;
+    /* Añadir transición */
+    margin: 10px;
+}
+
+.convenios-1 p {
+    text-align: left;
+    color: #000;
+    padding: 15px;
+}
+
+.convenios img {
+    width: 310px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.convenios-1:hover p,
+.convenios-1:hover {
+    border-color: #0071c1;
+    background-color: #f2f2f2;
+    /* Color celeste */
+    color: #0071c1;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    /* Añadir transición */
+}
+
+
+.contacto {
+    text-align: center;
+}
+
+.contacto h2,
+.contacto p {
+    margin-bottom: 40px;
+}
+
+.contacto-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contacto-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3.5px solid black;
+    /* Borde negro */
+    padding: 80px;
+    /* Espaciado interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    margin: 10px;
+    text-align: center;
+    /* Alinea el texto a la izquierda */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    transition: all 0.2s ease;
+    /* Añadir transición */
+}
+
+.contacto-1:hover .circle svg,
+.contacto-1:hover .circle,
+.contacto-1:hover {
+    border-color: #0071c1;
+    fill: #0071c1;
+    /* Cambia el color del SVG a celeste en hover */
+    background-color: #f2f2f2;
+    /* Color celeste */
+    transition: all 0.2s ease;
+    /* Añadir transición */
+}
+
+.circle {
+    width: 100px;
+    /* Ajusta el tamaño del círculo */
+    height: 100px;
+    /* Ajusta el tamaño del círculo */
+    background-color: #0071c1;
+    /* Color celeste */
+    border-radius: 50%;
+    /* Hace que el contenedor sea un círculo */
+    overflow: hidden;
+    /* Asegura que la imagen no se salga del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 5px solid #000;
+    /* Añade un borde negro */
+    margin-bottom: 20px;
+    /* Añade espacio entre el círculo y el contenido */
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    /* Puedes ajustar la posición vertical según tu diseño */
+    right: 20px;
+    /* Puedes ajustar la posición horizontal según tu diseño */
+    width: 60px;
+    /* Ajusta el ancho según el tamaño de tu logo */
+    height: 60px;
+    /* Ajusta el alto según el tamaño de tu logo */
+    background-color: #25D366;
+    /* Color de fondo del botón */
+    border-radius: 50%;
+    /* Para hacer un botón circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra para destacar el botón */
+    z-index: 1000;
+    /* Asegura que esté por encima del resto del contenido */
+}
+
+.whatsapp-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    /* Efecto de escala al pasar el mouse */
+}
+
+.contacto-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+}
+
+.contacto-content h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contacto-info {
+    margin-bottom: 10px;
+    /* Añade espacio entre los divs contacto-info */
+}
+
+.contacto-info span {
+    margin-bottom: 5px;
+}
+
+.contacto-info a {
+    text-decoration: none;
+    color: #0071c1;
+}
+
+.footer {
+    padding: 10px 0;
+    background-color: #3d3d3d;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    /* Cambiado a center para centrar el contenido */
+    padding: 25px;
+}
+
+.link img {
+    width: 35vh;
+}
+
+.footer p {
+    color: #C5C5C5;
+    text-align: center;
+}
+
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0071c1;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu-checkbox:checked~.navbar {
+        display: block;
+    }
+
+    .menu .navbar ul li a:hover {
+        color: #000000;
+    }
+
+    .header {
+        min-height: 100vh;
+    }
+
+    .header-content {
+        margin-bottom: 160px;
+    }
+
+    .maps-info .txt-p-1,
+    .txt-p-2 {
+        padding: 30px 15px;
+    }
+
+    .maps {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map-1,
+    .map-2,
+    .map-3 {
+        width: 100%;
+    }
+
+    .map-2 {
+        order: 1;
+    }
+
+    .map-3 {
+        order: 2;
+    }
+
+    .map-1 {
+        order: 3;
+    }
+
+    .info-sucursal {
+        padding: 10px;
+        max-height: none;
+        /* Remove the max-height restriction */
+        opacity: 1;
+        /* Ensure the content is visible */
+        transform: translateY(0);
+        /* Ensure the content is in the correct position */
+        transition: none;
+        /* Remove the transition effect */
+    }
+
+    .map-2,
+    .map-3 {
+        padding: 20px 20px;
+    }
+
+    .map-2:hover .info-sucursal,
+    .map-3:hover .info-sucursal {
+        max-height: none;
+    }
+
+    .services {
+        padding: 30px;
+    }
+
+    .services-group {
+        margin-bottom: 0;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .services-1 {
+        margin-bottom: 25px;
+        padding: 0 20px;
+    }
+
+    .convenios {
+        margin-bottom: 80px;
+    }
+
+    .convenios-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .convenios-1 {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .convenios-1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contacto-group {
+        display: contents;
+    }
+
+    .contacto-1 {
+        padding: 30px;
+        /* Espaciado interno */
+    }
+
+    .services-info-1 {
+        flex: 1 1 100%;
+        /* En dispositivos móviles, cada sección toma el 100% del ancho */
+    }
+
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-item img {
+        margin: 0 0 10px 0;
+        /* Espacio entre la imagen y el párrafo en dispositivos móviles */
+        max-width: 100%;
+        /* Ajusta el tamaño de la imagen según sea necesario */
+    }
+
+    .service-item p {
+        display: block;
+        opacity: 1;
+        margin-left: 0;
+    }
+
+    .service-item:hover p,
+    .service-item:hover img {
+        transform: none;
+        margin-right: 0;
+    }
+
+    .service-item {
+        pointer-events: none;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+}
