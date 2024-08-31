@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e1e2e6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 55px;
+  color: #000000;
+  text-transform: uppercase;
+  /* Convierte el texto a mayúsculas */
+  background-color: transparent;
+  /* Fondo transparente */
+  position: relative;
+  /* Para posicionar la línea subrayada */
+  display: inline-block;
+  /* Ajuste para el tamaño del contenedor */
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  /* Pseudo-elemento vacío */
+  position: absolute;
+  /* Posición absoluta para la línea subrayada */
+  left: 50%;
+  bottom: 0px;
+  /* Ajusta esta distancia según sea necesario */
+  width: 80%;
+  height: 5px;
+  /* Grosor de la línea */
+  background-color: #165f7d;
+  /* Color de la línea */
+  transform: translateX(-50%);
+  /* Compensa la posición para centrarla */
+}
+
+li {
+  list-style-type: disc;
+  /* Esto asegura que los puntos se muestren como discos (bullets) */
+}
+
+.txt-p-1 {
+  color: #c5c5c5;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.txt-p-2 {
+  padding: 20px 100px 50px 100px;
+  color: #454545;
+}
+
+.lbl {
+  color: #ffffff;
+  /* Color del texto blanco */
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 11px 35px;
+  background-color: #0071c1;
+  color: #f9fafc;
+  text-transform: uppercase;
+}
+
+.btn-1:hover {
+  background-color: #f9fafc;
+  color: #0071c1;
+  font-weight: bold;
+}

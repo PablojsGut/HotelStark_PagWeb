@@ -1,0 +1,48 @@
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../bg/bg1.JPG);
+  background-position: center 85%;
+  background-repeat: no-repeat;
+  /*background-size: 100% 100vh;*/
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  width: 100%;
+  text-align: center;
+  height: 100px;
+}
+
+.header-content h4 {
+  color: #f9fafc;
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.header-content h1 {
+  font-size: 100px;
+  line-height: 80px;
+  color: #f9fafc;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  color: #c2c2c2;
+  padding: 15px 0px 65px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    min-height: 100vh;
+  }
+
+  .header-content {
+    margin-bottom: 160px;
+  }
+}

@@ -1,0 +1,14 @@
+.about {
+  padding: 50px 0px 100px 0px;
+  background-color: #e1e2e6;
+}
+
+.about-content {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.about-group {
+  display: flex;
+  justify-content: space-between;
+}

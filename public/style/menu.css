@@ -1,0 +1,103 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  z-index: 1000;
+  /* Asegura que el menú esté por encima del contenido */
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: #fffdfc;
+  display: block;
+  font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+  color: #0071c1;
+}
+
+/* Oculta el checkbox visualmente pero lo mantiene funcional */
+#menu-checkbox {
+  position: absolute;
+  /* Saca el checkbox del flujo del documento */
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* Oculta el checkbox de forma accesible */
+  border: 0;
+}
+
+#menu-checkbox:checked ~ .navbar {
+  display: block;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  width: 180px;
+  /* Ajusta el ancho según sea necesario */
+  height: 85.7px;
+  /* Ajusta la altura según sea necesario */
+  background-image: url("../logos/LOGO\ HOTEL\ STARK\ -\ blanco.png");
+  background-size: cover;
+  /* Asegura que la imagen cubra todo el contenedor */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  /* Asegura que el contenedor se ajuste al tamaño del contenido */
+  text-indent: -9999px;
+  /* Esconde el texto, pero deja el contenido accesible para lectores de pantalla */
+  margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    padding: 30px;
+  }
+
+  .menu label {
+    display: initial;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0071c1;
+    display: none;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu-checkbox:checked ~ .navbar {
+    display: block;
+  }
+
+  .menu .navbar ul li a:hover {
+    color: #000000;
+  }
+}
